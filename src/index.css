@@ -1,13 +1,11 @@
-/* ::root {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-} */
-
-body {
+* {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+.hide {
+  display: none !important;
 }

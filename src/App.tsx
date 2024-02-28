@@ -10,7 +10,16 @@ function App() {
     <>
       <div>
         <Header />
-        <h1>Conteúdo...</h1>
+        <main className="main">
+          <div>
+            <h2>O que você vai fazer?</h2>
+            <p>Formulário</p>
+          </div>
+          <div>
+            <h2>Suas tarefas:</h2>
+            <p>Lista</p>
+          </div>
+        </main>
         <Footer />
       </div>
     </>

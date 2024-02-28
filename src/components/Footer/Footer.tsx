@@ -1,6 +1,9 @@
+// CSS
+import "./Footer.css";
+
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <p>
         <span>To Do List</span>
       </p>
