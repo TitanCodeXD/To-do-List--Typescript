@@ -56,7 +56,9 @@ const TaskForm = ({ btnText, taskList, setTaskList }: Props) => {
       <div className="input_container">
         <label htmlFor="difficulty">Dificuldade:</label>
         <input
-          type="text"
+          type="number"
+          min="0"
+          max="10"
           name="difficulty"
           value={difficulty}
           placeholder="Dificuldade da Tarefa"
