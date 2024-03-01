@@ -52,16 +52,14 @@ function App() {
     });
     setTaskList(updateItems);
 
-    // Exibe a mensagem de sucesso
     setShowSuccessMessage(true);
 
-    // Fecha o modal após um pequeno intervalo (500 ms)
     setTimeout(() => {
       hideOrShowModal(false);
-      // Oculta a mensagem de sucesso após um período de tempo (por exemplo, 2 segundos)
+
       setTimeout(() => {
         setShowSuccessMessage(false);
-      }, 500);
+      }, 510);
     }, 500);
   };
 
