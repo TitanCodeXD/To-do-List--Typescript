@@ -2,5 +2,14 @@
   background-color: #282c24;
   color: #61dafb;
   text-align: center;
+  align-items: center;
   padding: 1em;
+}
+
+.header > h1 > span {
+  color: #588ddd;
+}
+
+.header > h1 > img {
+  margin-left: 0.5vh;
 }

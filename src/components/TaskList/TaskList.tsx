@@ -13,9 +13,10 @@ import { CiTrash } from "react-icons/ci";
 type Props = {
   taskList: ITask[];
   handleDelete(id: number): void;
+  handleEdit(): void;
 };
 
-const TaskList = ({ taskList, handleDelete }: Props) => {
+const TaskList = ({ taskList, handleDelete, handleEdit }: Props) => {
   return (
     <>
       {taskList.length > 0 ? (
@@ -26,7 +27,7 @@ const TaskList = ({ taskList, handleDelete }: Props) => {
               <p>Dificuldade: {task.difficulty}</p>
             </div>
             <div className="actions">
-              <FaPencilAlt className="icon" />
+              <FaPencilAlt className="icon" onClick={handleEdit} />
               <CiTrash
                 className="icon"
                 onClick={() => {
