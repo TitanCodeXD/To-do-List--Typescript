@@ -3,6 +3,9 @@ import React from "react";
 // CSS
 import "./Modal.css";
 
+// Icons
+import { IoMdClose } from "react-icons/io";
+
 type Props = {
   children: React.ReactNode;
 };
@@ -17,7 +20,10 @@ const Modal = ({ children }: Props) => {
     <div id="modal" className="hide">
       <div className="fade" onClick={closeModal}></div>
       <div className="modal">
-        <h2>Texto Modal</h2>
+        <IoMdClose className="icon-modal" onClick={closeModal} />
+        <div>
+          <h2>Texto Modal</h2>
+        </div>
         {children}
       </div>
     </div>
