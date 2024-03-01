@@ -11,12 +11,16 @@ import TaskForm from "./components/TaskForm/TaskForm";
 import TaskList from "./components/TaskList/TaskList";
 import Modal from "./components/Modal/Modal.tsx";
 
+// Icons
+import { FaCheck } from "react-icons/fa";
+
 // Interface
 import { ITask } from "./interfaces/Task.ts";
 
 function App() {
   const [taskList, setTaskList] = useState<ITask[]>([]);
   const [taskToUpdate, setTaskToUpdate] = useState<ITask | null>(null);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const deleteTask = (id: number) => {
     setTaskList(
@@ -48,7 +52,17 @@ function App() {
     });
     setTaskList(updateItems);
 
-    hideOrShowModal(false);
+    // Exibe a mensagem de sucesso
+    setShowSuccessMessage(true);
+
+    // Fecha o modal após um pequeno intervalo (500 ms)
+    setTimeout(() => {
+      hideOrShowModal(false);
+      // Oculta a mensagem de sucesso após um período de tempo (por exemplo, 2 segundos)
+      setTimeout(() => {
+        setShowSuccessMessage(false);
+      }, 500);
+    }, 500);
   };
 
   return (
@@ -64,6 +78,15 @@ function App() {
             />
           }
         />
+
+        <div>
+          {showSuccessMessage && (
+            <div className="success-message">
+              <p>Editado com sucesso!</p>
+              <FaCheck className="icon-success" />
+            </div>
+          )}
+        </div>
         <Header />
         <main className="main">
           <div>

@@ -9,3 +9,61 @@
 .hide {
   display: none !important;
 }
+
+.success-message {
+  position: absolute;
+  width: 22vh;
+  height: 10vh;
+  background-color: #61dafb;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 10%;
+  border: 1px solid #000;
+  z-index: 1;
+}
+
+.success-message > p {
+  font-weight: bold;
+}
+
+.icon-success {
+  font-size: 0.9em;
+  color: #09332f;
+  padding: 0.2em;
+}
+
+@media (max-width: 800px) {
+  .success-message {
+    position: absolute;
+    width: 20vh;
+    height: 10vh;
+    background-color: #61dafb;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 10%;
+    border: 1px solid #000;
+    z-index: 1;
+  }
+
+  .success-message > p {
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .icon-success {
+    font-size: 0.9em;
+    color: #09332f;
+  }
+}
